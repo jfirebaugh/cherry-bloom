@@ -97,8 +97,8 @@
     <h2>Cherry Blossom Festival and Peak Bloom Dates</h2>
     <a href="http://www.flickr.com/photos/38036685@N00/8633763385/"><img src="blossoms.jpg"/></a>
     <p class='description'>
-      As of April 8, 2013, the <a href="http://en.wikipedia.org/wiki/National_Cherry_Blossom_Festival">cherry blossoms</a> are beginning to reach peak
-      bloom around the Tidal Basin in Washington, DC.
+      On April 9, 2013, the <a href="http://en.wikipedia.org/wiki/National_Cherry_Blossom_Festival">cherry blossoms</a>
+      around the Tidal Basin in Washington, DC reached peak bloom.
     </p>
     <p class='description'>
       The Peak Bloom Date is defined as the day in which 70 percent of the
@@ -291,7 +291,7 @@
             .attr('class', 'label')
             .style('fill', '#ccc')
             .attr('x', x(data[0].festival[0].end))
-            .attr('y', span + 1)
+            .attr('y', span * 2 + 1)
             .attr('dx', '-0.3em')
             .attr('dy', '-0.3em')
             .attr('text-anchor', 'end')
@@ -299,8 +299,8 @@
 
         svg.append('text')
             .attr('class', 'label')
-            .attr('x', (x(data[1].festival[0].begin) + x(data[1].festival[0].end)) / 2)
-            .attr('y', span * 2 + 1)
+            .attr('x', (x(data[2].festival[0].begin) + x(data[2].festival[0].end)) / 2)
+            .attr('y', span * 3 + 1)
             .attr('dy', '.35em')
             .attr('text-anchor', 'middle')
             .text("⟵ Festival Dates ⟶");

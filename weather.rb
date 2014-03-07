@@ -1,15 +1,15 @@
 require 'csv'
 
-weather = CSV.read('weather.csv')
+weather = CSV.read('weather-2013.csv')
 headers = weather.shift
 
-CSV.open('weather-new.csv', 'w') do |csv|
+CSV.open('weather-new.csv', 'a') do |csv|
   csv << ['date', 'tmin', 'tmax']
   
   weather.each do |row|
-    date = DateTime.strptime(row[1], '%Y%m%d')
+    date = DateTime.strptime(row[2], '%Y%m%d')
     if (3..5) === date.month
-      csv << [date.strftime('%Y-%m-%d'), Float(row[10]) / 10, Float(row[9]) / 10]
+      csv << [date.strftime('%Y-%m-%d'), Float(row[7]) / 10, Float(row[6]) / 10]
     end
   end
 end
